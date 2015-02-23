@@ -23,7 +23,7 @@ setTimeout(function() {
             }
         }
     }
-},10000);
+},5000);
 
 location.assign(list[0])
 
