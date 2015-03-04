@@ -12,8 +12,8 @@ request(url, function(error, response, html){
     if(!error){
         var $ = cheerio.load(html);
 
-    var title, release, rating;
-    var json = { title : "", release : "", rating : ""};
+    var title, release, rating, directory;
+    var json = { title : "", release : "", rating : "", director : ""};
 
     $('.header').filter(function(){
         var data = $(this);
@@ -29,6 +29,13 @@ request(url, function(error, response, html){
         rating = data.text();
 
         json.rating = rating;
+    })
+
+    $('.txt-block').filter(function(){
+        var data = $(this);
+        director = data.children().first().children().last().text();
+
+        json.director = director;
     })
 }
 
