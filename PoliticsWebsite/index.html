@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <!--
-	Alpha by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Alpha by HTML5 UP
+html5up.net | @n33co
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Politics.*</title>
+		<title>PolyC</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -14,201 +14,480 @@
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/jquery.scrollgress.min.js"></script>
+
 		<script src="js/skel.min.js"></script>
+
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
-		<noscript>
+		<script src="js/jqueryCarousel.js"></script>
+		<script src="jsjquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- <noscript> -->
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
-		</noscript>
+			<link rel="stylesheet" href="css/bootstrap-carousel.css" />
+
+		<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+		<!-- </noscript> -->
+
+		<style>
+			.carousel-inner > .item > img,
+			.carousel-inner > .item > a > img {
+				width: 100%;
+				margin: auto;
+			}
+		</style>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
+
 	<body class="landing">
 
 		<!-- Header -->
-			<header id="header" class="alt">
-				<h1><a href="index.html">Poltics.*</a> get the App</h1>
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li>
-							<a href="" class="icon fa-angle-down">Menu</a>
-							<ul>
-								<li><a href="generic.html">Info</a></li>
-								<li><a href="contact.html">Contact</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li>
-									<a href="">Explore</a>
-									<ul>
-										<li><a href="#">Abortion</a></li>
-										<li><a href="#">Gay Marriage</a></li>
-										<li><a href="#">Immigration</a></li>
-										<li><a href="#">War</a></li>
-										<li><a href="#">Zoo</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="#" class="button">Sign Up</a></li>
-					</ul>
-				</nav>
-			</header>
+		<header id="header" class="alt">
+			<!-- <h1><a href="index.html">Poltics.*</a> get the App</h1> -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li>
+						<a href="" class="icon fa-angle-down">Menu</a>
+						<ul>
+							<li><a href="votingInfo.html">Voters</a></li>
+							<!-- <li><a href="elements.html"></a>elements</li> -->
+							<li>
+								<a href="">Explore</a>
+								<ul>
+									<li><a href="#president">Presidential Race</a></li>
+									<li><a href="#domestic">Domestic Policy</a></li>
+									<li><a href="#foreign">Foreign Policy</a></li>
+									<!-- <li><a href="#legislation">Legislation</a></li> -->
+									<li><a href="#top">To the Top</a></li>
+								</ul>
+							</li>
+							<li><a href="aboutUs.html">About Us</a></li>
+
+						</ul>
+					</li>
+					<!-- <li><a href="#" class="button">Sign Up</a></li> -->
+				</ul>
+			</nav>
+		</header>
+
+		<a name="top"></a>
+
 
 		<!-- Banner -->
-			<section id="banner">
-				<h2>Politics.*</h2>
-				<p>The newsest way to interact with Politics</p>
-				<ul class="actions">
-					<li><a href="#" class="button special">Sign Up</a></li>
-					<li><a href="#" class="button">Learn More</a></li>
-				</ul>
-			</section>
+		<section id="banner">
+			<h2>PolyC</h2>
+			<p>The newsest way to interact with Politics</p>
+			<ul class="actions">
+				<li><a href="#" class="button special">Sign Up</a></li>
+				<!-- <li><a href="#" class="button">Learn More</a></li> -->
+			</ul>
+		</section>
+
+
+
+
 
 		<!-- Main -->
-			<section id="main" class="container">
+		<section id="main" class="container">
 
-				<section class="box special">
-					<header class="major">
-						<h2>Introducing the ultimate political site
+			<section class="box special">
+				<header class="major">
+					<h2>Introducing the ultimate political site
 						<br />
-						for easy access to non-partisan news</h2>
-						<p>Todays Top Stories</p>
-					</header>
-					<!--<span class="image featured"><img src="images/pic01.jpg" alt="" /></span> -->
-				</section>
-
-				<!--<section class="box special features">
-					<div class="features-row">
-						<section>
-							<span class="icon major fa-bolt accent2"></span>
-							<h3>Magna etiam</h3>
-							<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-						</section>
-						<section>
-							<span class="icon major fa-area-chart accent3"></span>
-							<h3>Ipsum dolor</h3>
-							<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-						</section>
-					</div>
-					<div class="features-row">
-						<section>
-							<span class="icon major fa-cloud accent4"></span>
-							<h3>Sed feugiat</h3>
-							<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-						</section>
-						<section>
-							<span class="icon major fa-lock accent5"></span>
-							<h3>Enim phasellus</h3>
-							<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-						</section>
-					</div>
-				</section> -->
-
-				<div class="row">
-					<div class="6u 12u(narrower)">
-
-						<section class="box special">
-							<span class="image featured"><img src="http://static01.nyt.com/images/2015/04/14/upshot/14up-Clinton/14up-Clinton-articleLarge.jpg" alt="" /></span>
-							<h3>Hillary Clinton Announces 2016 Presidential Bid</h3>
-							<p>Ending two years of speculation and coy denials, Hillary Rodham Clinton announced on Sunday that she would seek the presidency for a second time, immediately establishing herself as the likely 2016 Democratic nominee.</p>
-							<p>“I’m running for president,” she said with a smile near the end of a two-minute video released just after 3 p.m. “Everyday Americans need a champion. And I want to be that champion,” Mrs. Clinton said. “So I’m hitting the road to earn your vote — because it’s your time. And I hope you’ll join me on this journey.”</p>
-							<ul class="actions">
-								<li><a href="http://www.nytimes.com/2015/04/13/us/politics/hillary-clinton-2016-presidential-campaign.html?_r=0" class="button alt">Read More</a></li>
-							</ul>
-						</section>
-
-					</div>
-					<div class="6u 12u(narrower)">
-
-						<section class="box special">
-							<span class="image featured"><img src="http://cdn.static-economist.com/sites/default/files/imagecache/full-width/images/2015/04/blogs/democracy-america/obama.jpg" alt="" /></span>
-							<h3>The politics of the Iran deal "A question of trust"</h3>
-							<p>THE tentative agreement reached by America and other world powers that aims to thwart an Iranian rush to build a nuclear bomb is “not based on trust” but on unprecedented verification by outside monitors, President Barack Obama declared in the White House gardens on Thursday afternoon. Not for the first time, Mr Obama cast opponents of his nuclear diplomacy as war-mongers, telling Americans: “When you hear the inevitable critics of the deal sound off, ask them a simple question. Do you really think that this verifiable deal, if fully implemented, backed by the world's major powers, is a worse option than the risk of another war in the Middle East?" The president’s problem is that the provisional deal still raises questions of trust, in more ways than one.</p>
-							<ul class="actions">
-								<li><a href="http://www.economist.com/blogs/democracyinamerica/2015/04/politics-iran-deal" class="button alt">Read More</a></li>
-							</ul>
-						</section>
-
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="6u 12u(narrower)">
-
-						<section class="box special">
-							<span class="image featured"><img src="http://cbsnews1.cbsistatic.com/hub/i/r/2014/02/26/7bf812c4-1b7a-419e-a95b-f7c170adca85/thumbnail/620x350/588aa3d1bc4d07f2933bb59316dbae6f/2016-generic-vote-buttons.jpg" width = "100" height="" alt="" /></span>
-							<h3>Who is Running for President (and Who's Not)?</h3>
-							<div class="g-column g-democrats">
-								<p>At least a dozen Republicans and a handful of Democrats have expressed an interest in running for their party's 2016 presidential nomination. These are just a few that we can name:</p>
-
-     							 <div class="g-candidate g-clearfix g-candidate-paul">
-  								<div class="g-headshot g-status-0 " data-slug="paul">
-  								<img class="g-image g-lazy ll-init ll-loaded" src="http://graphics8.nytimes.com/newsgraphics/2015/01/30/candidate-tracker/assets/images/paul-150.png" data-src="http://graphics8.nytimes.com/newsgraphics/2015/01/30/candidate-tracker/assets/images/paul-150.png" width="100" height="100">
-  								<div class="g-profile">
-    							<h1 class="g-name">Rand Paul</h1>
-
-   								 </div>
-
-     							 <div class="g-candidate g-clearfix g-candidate-bush">
-  								<div class="g-headshot g-status-1 " data-slug="bush">
-  								<img class="g-image g-lazy ll-init ll-loaded" src="http://graphics8.nytimes.com/newsgraphics/2015/01/30/candidate-tracker/assets/images/bush-150.png" data-src="http://graphics8.nytimes.com/newsgraphics/2015/01/30/candidate-tracker/assets/images/bush-150.png" width ="100" height="100">
-  								<div class="g-profile">
-    								<h1 class="g-name">Jeb Bush</h1>
-
-    								</div>
-
-
-      								<div class="g-candidate g-clearfix g-candidate-christie">
-  								<div class="g-headshot g-status-1 " data-slug="christie">
-  								<img class="g-image g-lazy ll-init ll-loaded" src="http://graphics8.nytimes.com/newsgraphics/2015/01/30/candidate-tracker/assets/images/christie-150.png" data-src="http://graphics8.nytimes.com/newsgraphics/2015/01/30/candidate-tracker/assets/images/christie-150.png" width="100" height="100">
-
-							</div>
-  								<div class="g-profile">
-   									 <h1 class="g-name">Chris Christie</h1>
-
-    							</div>
-
- 								 </div>
-
-														<ul class="actions">
-													<li><a href="http://www.nytimes.com/interactive/2015/us/politics/2016-presidential-candidates.html?ref=politics" class="button alt">Read More</a></li>
-														</ul>
-										</section>
-
-					</div>
-					<div class="6u 12u(narrower)">
-
-						<section class="box special">
-							<span class="image featured"><img src="http://static01.nyt.com/images/2015/04/11/world/americas/20150412_CUBA_US-slide-G63C/20150412_CUBA_US-slide-G63C-jumbo-v2.jpg" alt="" /></span>
-							<h3>Obama and Raúl Castro Make History</h3>
-							<p>President Obama and President Raúl Castro of Cuba met here Saturday, in the first face-to-face discussion between the leaders of the two countries in a half century.</p>
-							<p>Seated beside Mr. Castro in a small room in the convention center downtown where the summit was being held, Mr. Obama called the event “an historic meeting.”</p>
-							<ul class="actions">
-								<li><a href="http://www.nytimes.com/2015/04/12/world/americas/obama-cuba-summit-of-the-americas.html?hp&action=click&pgtype=Homepage&module=a-lede-package-region&region=top-news&WT.nav=top-news" class="button alt">Read More</a></li>
-							</ul>
-						</section>
-
-					</div>
-				</div>
+						for easy access to non-partisan news
+					</h2>
+					<!-- <p>Todays Top Stories</p> -->
+				</header>
+				<!--<span class="image featured"><img src="images/pic01.jpg" alt="" /></span> -->
 
 			</section>
+
+
+
+			<a name="carousel"></a>
+			<!-- <section id="presidential-election" class="box"> -->
+			<section id="carousel">
+
+				<header class="minor">
+
+					<h3>
+						Today's Top Stories
+					</h3>
+					<!-- <br> -->
+					<!-- <p>The Latest in the US Presidential Race 2016</p> -->
+				</header>
+				<!--<span class="image featured"><img src="images/pic01.jpg" alt="" /></span> -->
+			</section>
+
+			<!-- Carousel -->
+			<div class="box">
+
+				<br>
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+
+						<div class="item active">
+
+							<a href="http://www.nytimes.com/2015/04/30/us/politics/bernie-sanders-campaign-for-president.html?_r=0">
+								<img src="images/carousel/Sanders.jpg" alt="Bernie Sanders Announces He Is Running for President" width="460" height="345">
+							</a>
+
+							<div class="carousel-caption">
+								<p>
+									Bernie Sanders Announces He Is Running for President
+								</p>
+							</div>
+						</div>
+
+
+
+						<div class="item">
+							<a href="http://www.npr.org/blogs/thetwo-way/2015/05/01/403496063/freddie-gray-update-new-speculation-on-his-death-and-peaceful-protests">
+								<img src="images/carousel/baltimorePolice.jpg" alt="Freddie Gray: Baltimore police to face criminal charges" width="460" height="345">
+							</a>
+
+							<div class="carousel-caption">
+								<p>
+									Freddie Gray: Baltimore police to face criminal charges
+								</p>
+							</div>
+						</div>
+
+						<div class="item">
+							<a href="http://www.nytimes.com/2015/04/30/us/politics/bernie-sanders-campaign-for-president.html?_r=0">
+								<img src="images/carousel/federalReserve.jpg" alt="Chania" width="460" height="345">
+							</a>
+
+							<div class="carousel-caption">
+								<p>
+									Federal Reserve keeps interest rates at record low
+								</p>
+							</div>
+						</div>
+
+						<div class="item">
+							<a href="http://www.nytimes.com/2015/04/30/us/politics/bernie-sanders-campaign-for-president.html?_r=0">
+								<img src="images/carousel/rand.jpg" alt="Chania" width="460" height="345">
+							</a>
+
+							<div class="carousel-caption">
+								<p>
+									Iran sanctions vote to test Rand Paul's 'different' foreign policy
+								</p>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only"></span>
+						<!-- <span class="sr-only">Previous</span> -->
+
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only"></span>
+						<!-- <span class="sr-only">Next</span> -->
+
+					</a>
+				</div>
+
+				<!--
+				<script>
+					$(document).ready(function(){
+						// Activate Carousel
+						$("#myCarousel").carousel();
+
+						// Enable Carousel Indicators
+						$(".item1").click(function(){
+							$("#myCarousel").carousel(0);
+						});
+						$(".item2").click(function(){
+							$("#myCarousel").carousel(1);
+						});
+						$(".item3").click(function(){
+							$("#myCarousel").carousel(2);
+						});
+						$(".item4").click(function(){
+							$("#myCarousel").carousel(3);
+						});
+
+						// Enable Carousel Controls
+						$(".left").click(function(){
+							$("#myCarousel").carousel("prev");
+						});
+						$(".right").click(function(){
+							$("#myCarousel").carousel("next");
+						});
+					});
+				</script>
+				-->
+			</div>
+
+
+			<!-- <section class="box special features">
+			<div class="features-row">
+			<section>
+			<span class="icon major fa-bolt accent2"></span>
+			<h3>Magna etiam</h3>
+			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+			</section>
+			<section>
+			<span class="icon major fa-area-chart accent3"></span>
+			<h3>Ipsum dolor</h3>
+			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+			</section>
+			</div>
+			<div class="features-row">
+			<section>
+			<span class="icon major fa-cloud accent4"></span>
+			<h3>Sed feugiat</h3>
+			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+			</section>
+			<section>
+			<span class="icon major fa-lock accent5"></span>
+			<h3>Enim phasellus</h3>
+			<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+			</section>
+			</div>
+			</section> -->
+
+
+
+
+
+			<a name="president"></a>
+			<!-- <section id="presidential-election" class="box"> -->
+			<section id="presidential-election">
+
+				<header class="minor">
+
+					<h3>
+						Presidential Election 2016
+					</h3>
+					<!-- <br> -->
+					<p>The Latest in the US Presidential Race 2016</p>
+				</header>
+				<!--<span class="image featured"><img src="images/pic01.jpg" alt="" /></span> -->
+			</section>
+
+
+
+
+
+
+			<div class="row">
+
+
+				<div class="6u 12u(narrower)">
+
+					<section class="box special">
+
+						<span class="image featured"><img src="http://static01.nyt.com/images/2015/05/02/us/02senate-web01-SUB/02senate-web01-SUB-master675.jpg" alt="" /></span>
+						<h3>
+							Senators Running for President Face a Delicate Balancing Act
+						</h3>
+						<br>
+						<p>
+							WASHINGTON — After Senator Marco Rubio announced his campaign for president in Miami last month, he did not catch the next plane to Iowa or New Hampshire. Instead, he raced back to Washington to attend a Senate Foreign Relations Committee meeting on a bill giving Congress the power to weigh in on any nuclear deal President Obama reaches with Iran.
+						</p>
+						<ul class="actions">
+							<li><a href="http://www.nytimes.com/2015/05/02/us/politics/senators-running-for-president-face-a-delicate-balancing-act.html?ref=us" class="button alt">Read More</a></li>
+						</ul>
+					</section>
+				</div>
+
+
+
+				<div class="6u 12u(narrower)">
+
+					<section class="box special">
+
+						<span class="image featured"><img src="http://si.wsj.net/public/resources/images/BN-IE460_SUPERP_M_20150430135937.jpg" width = "100" height="" alt="" /></span>
+						<div class="g-column g-democrats">
+							<h3>
+								Roles of Presidential Super PACs Expanding
+							</h3>
+							<br>
+							<p>
+								When Carly Fiorina announces on Monday that she is running for president, she will do so under the banner of Carly for President. But a different group—an independent super PAC called Carly for America—will handle many of the basic tasks of campaigning, such as identifying and contacting Republican voters.
+							</p>
+							<ul class="actions">
+								<li><a href="http://www.wsj.com/articles/roles-of-presidential-super-pacs-expanding-1430437766" class="button alt">Read More</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+
+
+
+			<a name="domestic"></a>
+
+			<!-- <div id="foreign-policy" class="box"> -->
+			<div id="domestic-policy">
+				<header>
+					<h3>
+						Domestic Policy
+					</h3>
+					<!-- <br> -->
+					<p>The policies that affect us at home</p>
+				</header>
+				<!--<span class="image featured"><img src="images/pic01.jpg" alt="" /></span> -->
+			</div>
+
+
+
+
+			<div class="row">
+				<div class="6u 12u(narrower)">
+
+					<section class="box special">
+
+						<span class="image featured"><img src="http://static01.nyt.com/images/2015/05/01/us/01PATRIOTjp/01PATRIOTjp-superJumbo.jpg" style="height:50%;width:100%;" alt="" /></span>
+						<h3>Patriot Act Faces Revisions Backed by Both Parties</h3>
+						<br>
+
+						<p>
+							Under mounting pressure, the Internal Revenue Service and the Justice Department have announced in recent months that they will no longer use a law designed to go after drug dealers and terrorists to seize the bank accounts of small business owners who are not suspected of criminal activity						</p>
+						<ul class="actions">
+							<li><a href="http://www.nytimes.com/2015/05/01/us/politics/patriot-act-faces-revisions-backed-by-both-parties.html?ref=politics&_r=0" class="button alt">Read More</a></li>
+						</ul>
+					</section>
+				</div>
+
+
+
+				<div class="6u 12u(narrower)">
+
+					<section class="box special">
+
+						<span class="image featured"><img src="http://cdn.static-economist.com/sites/default/files/imagecache/full-width/images/print-edition/20150502_USP003_0.jpg" style="height:50%;width:100%;" alt="" /></span>
+						<h3>
+							Why rioting makes things worse
+
+						</h3>
+						<br>
+						<p>
+							OUTSIDE a gutted pharmacy in West Baltimore, William Tyler, a 41-year-old youth worker, illustrates the dilemma of policing in his city. Speaking about Freddie Gray, a 25-year-old who died on April 19th after being arrested by Baltimore’s police, he complains that: “None of these polices ever go to jail, they don’t get fired. Police is nothing but gangs too.”
+						</p>
+						<ul class="actions">
+							<li><a href="http://www.economist.com/news/united-states/21650158-angry-youths-burn-their-own-neighbourhood-why-rioting-makes-things-worse" class="button alt">Read More</a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+			<a name="foreign"></a>
+
+			<!-- <div id="foreign-policy" class="box"> -->
+			<div id="foreign-policy">
+				<header class="minor">
+					<h3>
+						Foreign Policy
+					</h3>
+					<!-- <br> -->
+					<p>Everything From the War in the Middle East to Immigration Policy</p>
+				</header>
+				<!--<span class="image featured"><img src="images/pic01.jpg" alt="" /></span> -->
+			</div>
+
+
+
+
+			<div class="row">
+				<div class="6u 12u(narrower)">
+
+					<section class="box special">
+
+						<span class="image featured"><img src="http://i.guim.co.uk/media/w-620/h--/q-95/42a5f6763795f142b57ceca8d98d882240a84d89/0_582_4272_2563/1000.jpg" style="height:50%;width:100%;" alt="" /></span>
+						<h3>
+							Iran sanctions vote to test Rand Paul's 'different' foreign policy
+						</h3>
+						<br>
+						<p>
+							Shortly after launching his presidential campaign last month, Rand Paul described himself as a different kind of Republican on the hot button issue of foreign policy.
+						</p>
+						<ul class="actions">
+							<li><a href="http://www.theguardian.com/us-news/2015/may/01/iran-sanctions-vote-rand-paul-foreign-policy" class="button alt">Read More</a></li>
+						</ul>
+					</section>
+				</div>
+
+
+
+				<div class="6u 12u(narrower)">
+					<section class="box special">
+						<span class="image featured"><img src="http://static01.nyt.com/images/2015/05/02/world/02Military-web/02Military-web-master675.jpg" style="height:50%;width:100%" alt="" /></span>
+						<h3>
+							White House Looks to Ease Arab Fears Over Iran Nuclear Pact
+						</h3>
+						<br>
+
+						<p>
+							WASHINGTON — The Obama administration is scrambling for reassurances it can present this month at a Camp David summit meeting to persuade Arab allies that the United States has their backs, despite a pending nuclear deal with Iran.
+						</p>
+						<ul class="actions">
+							<li><a href="http://www.nytimes.com/2015/05/02/world/white-house-looks-to-ease-arab-fears-over-iran-nuclear-pact.html?ref=world" class="button alt">Read More</a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		</section>
 
 
 		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
+		<!-- <footer id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="#">Brian Lai - powered by HTML5 UP</a></li>
+			</ul>
+		</footer> -->
 
 	</body>
 </html>
