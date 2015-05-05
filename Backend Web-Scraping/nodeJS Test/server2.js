@@ -19,7 +19,9 @@ request('http://www.nytimes.com/pages/politics/index.html', function (error, res
                 url: url
             };
             // Push meta-data into parsedResults array
-            parsedResults.push(metadata);
+            if(metadata.title != "" && metadata.url != undefined){
+                parsedResults.push(metadata);
+            }
         });
         // Log our finished parse results in the terminal
         console.log(parsedResults);
@@ -42,7 +44,9 @@ request('http://www.nytimes.com/pages/politics/index.html', function (error, res
                 url2: url2
             };
             // Push meta-data into parsedResults array
-            parsedResults2.push(metadata2);
+            if(metadata2.title2 != "" && metadata2.url2 != undefined){
+                parsedResults2.push(metadata2);
+            }
         });
         // Log our finished parse results in the terminal
         console.log(parsedResults2);
