@@ -17,12 +17,46 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+		 <!--script>
+		// 	var map;
+		// 	function initialize() {
+		// 		var mapCanvas = document.getElementById('map-canvas');
+		// 		var mapOptions = {
+		// 			center: new google.maps.LatLng(44.5403, -78.5463),
+		// 			zoom: 8,
+		// 			mapTypeId: google.maps.MapTypeId.ROADMAP
+		// 		}
+		// 	var map = new google.maps.Map(mapCanvas, mapOptions)
+		// 	}
+		// 	google.maps.event.addDomListener(window, 'load', initialize);
+		// 	google.maps.event.addDomListener(window, 'resize', function() {
+		// 		var center = map.getCenter();
+		// 		google.maps.event.trigger(map, "resize");
+		// 		map.setCenter(center);
+		// 	});
+		// </script-->
+
+		<!--style>
+			#map-canvas {
+				height: 500px;
+				width: 400px;
+
+			}
+		</style-->
+
+
+
+
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
 	</head>
 	<body>
 
@@ -83,10 +117,24 @@
 				</p>
 
 				<h3>Places Near You To Vote</h3>
-				<span class="image">
 
-					<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d48832.77797931689!2d-88.22177196083896!3d40.096628829283986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1svoting+places+near+me!5e0!3m2!1sen!2sus!4v1430438561258" width="800" height="450" frameborder="0" style="border:0"></iframe>
 
+
+
+
+
+
+
+				<div id="map-canvas"></div>
+
+
+
+
+
+
+
+				<span class="image featured" style="margin-right:auto;margin-left:auto;">
+					<iframe align="middle" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d48832.77797931689!2d-88.22177196083896!3d40.096628829283986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1svoting+places+near+me!5e0!3m2!1sen!2sus!4v1430438561258" width="800" height="450" frameborder="0" style="border:0"></iframe>
 				</span>
 
 
@@ -113,7 +161,267 @@
 				<h3> Registration Deadlines </h3>
 				<p>Almost every state has a voter registration deadline. In order to be eligible to vote, you must submit the <a href ="http://www.eac.gov/voter_resources/register_to_vote.aspx">National Mail Voter Registration Form </a> by these deadlines: </p>
 
-				<ul><li><b>Alabama</b> – Voter registration is closed during the 10 days before an election.</li><li><b>Alaska</b> – 30 days before the election</li><li><b>Arizona</b> – 29 days before the election</li><li><b>Arkansas</b> – 30 days before the election</li><li><b>California</b> – 15 days before the election</li><li><b>Colorado</b> – 29 days before the election. If the application is received in the mails without a postmark, it must be received within 5 days of the close of registration.</li><li><b>Connecticut</b> – 14 days before the election</li><li><b>Delaware</b> – The fourth Saturday before a primary or general election, and 10 days before a special election.</li><li><b>District of Columbia</b> – 30 days before the election</li><li><b>Florida</b> – 29 days before the election</li><li><b>Georgia</b> – The fifth Monday before any general primary, general election, or presidential preference primary, or regularly scheduled special election following the Georgia Election Code. If a special &nbsp;election is scheduled on a date other that those dates prescribed by the Georgia Election Code, registration would close on the fifth day after the call.</li><li><b>Hawaii</b> – 30 days before the election</li><li><b>Idaho</b> – 25 days before the election</li><li><b>Illinois</b> – 28 days before the election</li><li><b>Indiana</b> – 29 days before the election</li><li><b>Iowa</b> – Must be delivered by 5 PM, 10 days before the election, if it is a state primary or general election; 11 days before all others. Registration forms which are postmarked 15 or more days before an election are considered on time even if received after the deadline. If you fail to meet these deadlines, you can register to vote on election day.</li><li><b>Kansas</b> – Postmarked or delivered 21 days before the election.</li><li><b>Kentucky</b> – 29 days before the election</li><li><b>Louisiana</b> – 30 days before the election</li><li><b>Maine</b> – Delivered 21 business days before the election or you can register in-person up to and including election day.</li><li><b>Maryland</b> – Delivered by 9 PM, 21 days before the election</li><li><b>Massachusetts</b> – 20 days before the election</li><li><b>Michigan</b> – 30 days before the election</li><li><b>Minnesota</b> – Delivered by 5 PM, 21 days before the election. You can also register at the polling place on election day.</li><li><b>Mississippi</b> – 30 days before the election</li><li><b>Missouri</b> – 28 days before the election</li><li><b>Montana</b> – 30 days before the election</li><li><b>Nebraska</b> – The third Friday before the election (or delivered by 6 PM, on the second Friday before the election)</li><li><b>Nevada</b> – The deadline for mail-in registration is the fifth Saturday before any primary or general election. In person registration remains available until 9 PM on the third Tuesday preceding any primary or general election. You may register to vote in person only by appearing at the office of the County Clerk/Registrar of Voters.</li><li><b>New Hampshire</b> – Town and city clerks will accept the National Mail Voter Registration Form only as a request for their own absentee voter mail-in registration form, which your city or town clerk must receive by 10 days before the election. You can register at the town or city clerk’s office or in-person on election day.</li><li><b>New Jersey</b> – 21 days before the election</li><li><b>New Mexico</b> – 28 days before the election</li><li><b>New York</b> – 25 days before the election</li><li><b>North Carolina</b> – Postmarked 25 days before the election or received in the elections office or designated voter registration agency site by 5 PM, 25 days before the election.</li><li><b>North Dakota</b> – No voter registration</li><li><b>Ohio</b> – 30 days before the election</li><li><b>Oklahoma</b> – 25 days before the election</li><li><b>Oregon</b> – 21 days before the election</li><li><b>Pennsylvania</b> – 30 days before an election or primary</li><li><b>Rhode Island</b> – 30 days before the election</li><li><b>South Carolina</b> – 30 days before the election</li><li><b>South Dakota</b> – Received 15 days before the election</li><li><b>Tennessee</b> – 30 days before the election</li><li><b>Texas</b> – 30 days before the election</li><li><b>Utah</b> – 30 days before the election for mail-in applications and 15 days before the election for walk-in registration at the county clerk’s office</li><li><b>Vermont</b> – Delivered to the town clerk before 5 PM, on the Wednesday before the election</li><li><b>Virginia</b> – Delivered 22 days before the election</li><li><b>Washington</b> – 29 days before the election or 8 days before the election if delivered in person to the local voter registration office</li><li><b>West Virginia</b> – 21 days before the election</li><li><b>Wisconsin</b> – 20 days before the election or completed in the local voter registration office up to 5 PM or the close of business, whichever is later, on the Friday before the election. You can also register at the polling place on election day.</li><li><b>Wyoming</b> – Cannot accept the National Mail Voter Registration Form. You can register in-person, by mail, or at the polls on election day.</li></ul>
+				<div class="table-wrapper">
+					<table>
+						<thead>
+							<tr>
+								<th><b>State</b></th>
+								<th><b>Description of Deadline</b></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Alabama</td>
+								<td>Voter registration is closed during the 10 days before an election.</td>
+							</tr>
+							<tr>
+								<td>Alaska</td>
+								<td>30 days before the election</td>
+							</tr>
+							<tr>
+								<td>Arizona</td>
+								<td> 29 days before the election</td>
+							</tr>
+							<tr>
+								<td>Arkansas</td>
+								<td>30 days before the election</td>
+							</tr>
+							<tr>
+								<td>California</td>
+								<td>15 days before the election</td>
+							</tr>
+							<tr>
+								<td>Colorado</td>
+								<td>29 days before the election. If the application is received in the mails without a postmark, it must be received within 5 days of the close of registration.</td>
+							</tr>
+							<tr>
+								<td>Connecticut</td>
+								<td>14 days before the election</td>
+							</tr>
+							<tr>
+								<td>Delaware</td>
+								<td>The fourth Saturday before a primary or general election, and 10 days before a special election.</td>
+							</tr>
+							<tr>
+								<td>District of Columbia</td>
+								<td>30 days before the election</td>
+							</tr>
+							<tr>
+								<td>FLorida</td>
+								<td>29 days before the election</td>
+							</tr>
+							<tr>
+								<td>Georgia</td>
+								<td>The fifth Monday before any general primary, general election, or presidential preference primary, or regularly scheduled special election following the Georgia Election Code. If a special &nbsp;election is scheduled on a date other that those dates prescribed by the Georgia Election Code, registration would close on the fifth day after the call.</td>
+							</tr>
+							<tr>
+								<td>Hawaii</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Idaho</td>
+								<td>25 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Illinois</td>
+								<td>28 days before the election</td>
+							</tr>
+							<tr>
+								<td>Indiana</td>
+								<td>29 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Iowa</td>
+								<td>Must be delivered by 5 PM, 10 days before the election, if it is a state primary or general election; 11 days before all others. Registration forms which are postmarked 15 or more days before an election are considered on time even if received after the deadline. If you fail to meet these deadlines, you can register to vote on election day.</td>
+
+							</tr>
+							<tr>
+								<td>Kansas</td>
+								<td>Postmarked or delivered 21 days before the election.</td>
+
+							</tr>
+							<tr>
+								<td>Kentucky</td>
+								<td>29 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Louisiana</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Maine</td>
+								<td>Delivered 21 business days before the election or you can register in-person up to and including election day.</td>
+
+							</tr>
+							<tr>
+								<td>Maryland</td>
+								<td>Delivered by 9 PM, 21 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Massachusetts</td>
+								<td>20 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Michigan</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Minnesota</td>
+								<td>Delivered by 5 PM, 21 days before the election. You can also register at the polling place on election day.</td>
+
+							</tr>
+							<tr>
+								<td>Mississippi</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Missouri</td>
+								<td>28 days before the election</td>
+
+							</tr><tr>
+								<td>Montana</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Nebraska</td>
+								<td>The third Friday before the election (or delivered by 6 PM, on the second Friday before the election)</td>
+
+							</tr>
+							<tr>
+								<td>Nevada</td>
+								<td>The deadline for mail-in registration is the fifth Saturday before any primary or general election. In person registration remains available until 9 PM on the third Tuesday preceding any primary or general election. You may register to vote in person only by appearing at the office of the County Clerk/Registrar of Voters.</td>
+
+							</tr>
+							<tr>
+								<td>New Hampshire</td>
+								<td>Town and city clerks will accept the National Mail Voter Registration Form only as a request for their own absentee voter mail-in registration form, which your city or town clerk must receive by 10 days before the election. You can register at the town or city clerk’s office or in-person on election day.</td>
+
+							</tr>
+							<tr>
+								<td>New Jersey</td>
+								<td>21 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>New Mexico</td>
+								<td>28 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>New York</td>
+								<td>25 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>North Carolina</td>
+								<td>Postmarked 25 days before the election or received in the elections office or designated voter registration agency site by 5 PM, 25 days before the election.</td>
+
+							</tr>
+							<tr>
+								<td>North Dakota</td>
+								<td>No voter registration</td>
+
+							</tr>
+							<tr>
+								<td>Ohio</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Oklahoma</td>
+								<td>25 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Oregon</td>
+								<td>21 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Pennsylvania</td>
+								<td>30 days before an election or primary</td>
+
+							</tr>
+							<tr>
+								<td>Rhode Island</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>South Carolina</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>South Dakota</td>
+								<td>Received 15 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Tennessee</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Texas</td>
+								<td>30 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Utah</td>
+								<td>30 days before the election for mail-in applications and 15 days before the election for walk-in registration at the county clerk’s office</td>
+
+							</tr>
+							<tr>
+								<td>Vermont</td>
+								<td>Delivered to the town clerk before 5 PM, on the Wednesday before the election</td>
+
+							</tr>
+							<tr>
+								<td>Virginia</td>
+								<td>Delivered 22 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Washington</td>
+								<td>29 days before the election or 8 days before the election if delivered in person to the local voter registration office</td>
+
+							</tr>
+							<tr>
+								<td>West Virginia</td>
+								<td>21 days before the election</td>
+
+							</tr>
+							<tr>
+								<td>Wisconsin</td>
+								<td>20 days before the election or completed in the local voter registration office up to 5 PM or the close of business, whichever is later, on the Friday before the election. You can also register at the polling place on election day.</td>
+
+							</tr>
+							<tr>
+								<td>Wyoming</td>
+								<td>Cannot accept the National Mail Voter Registration Form. You can register in-person, by mail, or at the polls on election day.</td>
+
+							</tr>
+
+						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="2"></td>
+								<td></td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
 			</div>
 		</section>
 
