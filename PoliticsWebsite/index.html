@@ -50,6 +50,15 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<!-- <h1><a href="index.html">Poltics.*</a> get the App</h1> -->
 			<nav id="nav">
 				<ul>
+					<script>
+						var currentUser = Parse.User.current();
+
+						if (currentUser) {
+						// do stuff with the user
+						} else {
+						// show the signup or login page
+						};
+					</script>
 					<li><a href="index.html">Home</a></li>
 					<li>
 						<a href="" class="icon fa-angle-down">Menu</a>
@@ -83,7 +92,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<h2>PolyC</h2>
 			<p>The newsest way to interact with Politics</p>
 			<ul class="actions">
-				<li><a href="signUp.html" class="button special">Sign Up</a></li>
+				<li><a href="#" class="button special">Sign Up</a></li>
 				<!-- <li><a href="#" class="button">Learn More</a></li> -->
 			</ul>
 		</section>
@@ -114,10 +123,10 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<section id="carousel">
 
 				<header class="minor">
-					<br><br><br>
-					<h2>
+
+					<h3>
 						Today's Top Stories
-					</h2>
+					</h3>
 					<!-- <br> -->
 					<!-- <p>The Latest in the US Presidential Race 2016</p> -->
 				</header>
@@ -142,68 +151,54 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 					<div class="carousel-inner" role="listbox">
 
 						<div class="item active">
-							<h3>
-								Bernie Sanders Announces He is Running for President
-							</h3>
+
 							<a href="http://www.nytimes.com/2015/04/30/us/politics/bernie-sanders-campaign-for-president.html?_r=0">
 								<img src="images/carousel/Sanders.jpg" alt="Bernie Sanders Announces He Is Running for President" width="460" height="345">
 							</a>
 
-							<!-- <div class="carousel-caption">
+							<div class="carousel-caption">
 								<p>
 									Bernie Sanders Announces He Is Running for President
 								</p>
-							</div> -->
+							</div>
 						</div>
 
 
 
 						<div class="item">
-
-							<h3>
-								Freddie Gray: Baltimore police to face criminal charges
-							</h3>
-
 							<a href="http://www.npr.org/blogs/thetwo-way/2015/05/01/403496063/freddie-gray-update-new-speculation-on-his-death-and-peaceful-protests">
 								<img src="images/carousel/baltimorePolice.jpg" alt="Freddie Gray: Baltimore police to face criminal charges" width="460" height="345">
 							</a>
 
-							<!-- <div class="carousel-caption">
+							<div class="carousel-caption">
 								<p>
 									Freddie Gray: Baltimore police to face criminal charges
 								</p>
-							</div> -->
+							</div>
 						</div>
 
 						<div class="item">
-
-							<h3>
-								Federal Reserve keeps interest rates at record low
-							</h3>
 							<a href="http://www.nytimes.com/2015/04/30/us/politics/bernie-sanders-campaign-for-president.html?_r=0">
 								<img src="images/carousel/federalReserve.jpg" alt="Chania" width="460" height="345">
 							</a>
 
-							<!-- <div class="carousel-caption">
+							<div class="carousel-caption">
 								<p>
 									Federal Reserve keeps interest rates at record low
 								</p>
-							</div> -->
+							</div>
 						</div>
 
 						<div class="item">
-							<h3>
-								Iran sanctions vote to test Rand Paul's 'different' foreign policy
-							</h3>
 							<a href="http://www.nytimes.com/2015/04/30/us/politics/bernie-sanders-campaign-for-president.html?_r=0">
 								<img src="images/carousel/rand.jpg" alt="Chania" width="460" height="345">
 							</a>
 
-							<!-- <div class="carousel-caption">
+							<div class="carousel-caption">
 								<p>
 									Iran sanctions vote to test Rand Paul's 'different' foreign policy
 								</p>
-							</div> -->
+							</div>
 						</div>
 
 					</div>
@@ -293,9 +288,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 				<header class="minor">
 
-					<h2>
+					<h3>
 						Presidential Election 2016
-					</h2>
+					</h3>
 					<!-- <br> -->
 					<p>The Latest in the US Presidential Race 2016</p>
 				</header>
@@ -322,7 +317,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 						<p>
 							WASHINGTON — After Senator Marco Rubio announced his campaign for president in Miami last month, he did not catch the next plane to Iowa or New Hampshire. Instead, he raced back to Washington to attend a Senate Foreign Relations Committee meeting on a bill giving Congress the power to weigh in on any nuclear deal President Obama reaches with Iran.
 						</p>
-						<ul class="actions" >
+						<ul class="actions">
 							<li><a href="http://www.nytimes.com/2015/05/02/us/politics/senators-running-for-president-face-a-delicate-balancing-act.html?ref=us" class="button alt">Read More</a></li>
 						</ul>
 					</section>
@@ -358,9 +353,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<!-- <div id="foreign-policy" class="box"> -->
 			<div id="domestic-policy">
 				<header>
-					<h2>
+					<h3>
 						Domestic Policy
-					</h2>
+					</h3>
 					<!-- <br> -->
 					<p>The policies that affect us at home</p>
 				</header>
@@ -423,9 +418,9 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 			<!-- <div id="foreign-policy" class="box"> -->
 			<div id="foreign-policy">
 				<header class="minor">
-					<h2>
+					<h3>
 						Foreign Policy
-					</h2>
+					</h3>
 					<!-- <br> -->
 					<p>Everything From the War in the Middle East to Immigration Policy</p>
 				</header>

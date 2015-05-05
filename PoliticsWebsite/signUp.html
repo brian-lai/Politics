@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Sign Up - PolyC</title>
+        <meta name="description" content="My Parse App">
+        <meta name="viewport" content="width=device-width">
+        <!-- <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/foundation.min.css"> -->
+        <!--<script src="/js/parse-1.4.2.min.js"></script>-->
+
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/parse-1.4.2.min.js"></script>
+        <script src="js/jquery.dropotron.min.js"></script>
+        <script src="js/jquery.scrollgress.min.js"></script>
+
+        <script src="js/skel.min.js"></script>
+        <script src="js/skel-layers.min.js"></script>
+        <script src="js/init.js"></script>
+        <link rel="stylesheet" href="css/skel.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/style-wide.css" />
+
+
+
+
+    </head>
+    <body>
+        <header id="header" class="skel-layers-fixed">
+            <!-- <h1><a href="index.html">Politics.*</a> get the App</h1> -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="" class="icon fa-angle-down">Menu</a>
+                        <ul>
+                            <li><a href="votingInfo.html">Voters</a></li>
+                            <!-- <li><a href="elements.html"></a>elements</li> -->
+                            <li>
+                                <a href="">Explore</a>
+                                <ul>
+                                    <li><a href="index.html#president">Presidential Race</a></li>
+                                    <li><a href="index.html#domestic">Domestic Policy</a></li>
+                                    <li><a href="index.html#foreign">Foreign Policy</a></li>
+                                    <!-- <li><a href="#legislation">Legislation</a></li> -->
+                                    <li><a href="index.html#top">To the Top</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="aboutUs.html">About Us</a></li>
+
+                        </ul>
+                    </li>
+                    <!-- <li><a href="#" class="button">Sign Up</a></li> -->
+                </ul>
+            </nav>
+        </header>
+
+
+        <section id="main" class="container">
+            <header>
+                <h2>Sign Up</h2>
+                <p>Signing up is easy and painless</p>
+            </header>
+            <div class="box special">
+
+
+                <form method="post">
+
+                    <div class="row unifrom 50%">
+                        <div class="6u 12u(mobilep)">
+                            <input type="text" name="username" id="username" value="" placeholder="Username" />
+                        </div>
+                        <div class="6u 12u(mobilep)">
+                            <input type="text" name="birthdate" id="birthdate" value="" placeholder="Date of Birth" />
+                        </div>
+                    </div>
+                    <div class="row uniform 50%">
+                        <div class="6u 12u(mobilep)">
+                            <input type="password" name="password" id="password" value="" placeholder="Password" />
+                        </div>
+                        <div class="6u 12u(mobilep)">
+                            <input type="text" name="address1" id="address1" value="" placeholder="Address Line 1" />
+                        </div>
+                    </div>
+                    <div class="row uniform 50%">
+                        <div class="6u 12u(mobilep)">
+                            <input type="password" name="password" id="passwordCheck" value="" placeholder="Re-enter Password" />
+                        </div>
+                        <div class="6u 12u(mobilep)">
+                            <input type="text" name="address2" id="address2" value="" placeholder="Address Line 2" />
+                        </div>
+                    </div>
+                    <div class="row uniform 50%">
+                        <div class="6u 12u(mobilep)">
+                            <input type="text" name="email" id="email" value="" placeholder="Email@PolyC.com" />
+                        </div>
+                        <!-- <div class="6u 12u(mobilep)">
+                            <input type="text" name="username" id="username" value="" placeholder="Username" />
+                        </div> -->
+                    </div>
+
+
+    <!--
+                    <input type="text" id="username" />
+                    <br><br>
+                    <input type="password" id="password" />
+                    <br><br>
+                    <input type="text" id="email" /> <br> -->
+                </form>
+                <br><br>
+                <input type="button" href="splash.html" value="Sign Up" onclick="signUp();" style="margin-left:auto;margin-right:auto;">
+
+
+                    <script type="text/javascript">
+                        Parse.initialize("eRQ56q28XjVaSyAlFbcQNoaBfjUp9jA4olPmxmKb", "t9e5HhbInYiFf4qeT9FqoYlkzOlACzAV4SNzsjSl");
+
+                        var TestObject = Parse.Object.extend("TestObject");
+                        var testObject = new TestObject();
+
+                        testObject.save({foo: "fas"}, {
+                            success: function(object) {
+                                $(".success").show();
+                            },
+                            error: function(model, error) {
+                                $(".error").show();
+                            }
+                        });
+
+                        function signUp() {
+
+                            var name = document.getElementById("username").value;
+                            var pass = document.getElementById("password").value;
+                            var mail = document.getElementById("email").value;
+                            var addr = document.getElementById("address1").value;
+                            var addr2 = document.getElementById("address2").value;
+                            var birthdate = document.getElementById("birthdate").value;
+                            var user = new Parse.User();
+
+                            user.set("username", name);
+                            user.set("password", pass);
+                            user.set("email", mail);
+                            user.set("Address1", addr);
+                            user.set("Address2", addr2);
+                            user.set("birthdate", birthdate);
+                            user.signUp(null, {
+                                success: function(user) {
+                                    // Hooray! Let them use the app now.
+                                },
+                                error: function(user, error) {
+                                    // Show the error message somewhere and let the user try again.
+                                    alert("Error: " + error.code + " " + error.message);
+                                }
+                            });
+
+                        };
+
+                        // other fields can be set just like with Parse.Object
+
+                        user.signUp(null, {
+                            success: function(user) {
+                                // Hooray! Let them use the app now.
+                            },
+                            error: function(user, error) {
+                                // Show the error message somewhere and let the user try again.
+                                alert("Error: " + error.code + " " + error.message);
+                            }
+                        });
+                    </script>
+                </input>
+            </div>
+        </section>
+    </body>
+</html>
