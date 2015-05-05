@@ -110,65 +110,66 @@
                     <input type="text" id="email" /> <br> -->
                 </form>
                 <br><br>
-                <input type="button" href="splash.html" value="Sign Up" onclick="signUp();" style="margin-left:auto;margin-right:auto;">
+                <form action="index.html">
+                    <input type="button" value="Sign Up" onclick="signUp();" style="margin-left:auto;margin-right:auto;">
+
+                        <script type="text/javascript">
+                            Parse.initialize("F5HFM39q8uLhhIM41xvppSmJDorXRljrXa5D2gWP", "05FQbZTRU7hxV2AMDcZDhDgUGCXQko1WbguwfFHe");
+
+                            // var TestObject = Parse.Object.extend("TestObject");
+                            // var testObject = new TestObject();
+                            //
+                            // testObject.save({foo: "fas"}, {
+                            //     success: function(object) {
+                            //         $(".success").show();
+                            //     },
+                            //     error: function(model, error) {
+                            //         $(".error").show();
+                            //     }
+                            // });
+
+                            function signUp() {
+
+                                var name = document.getElementById("username").value;
+                                var pass = document.getElementById("password").value;
+                                var passCheck = document.getElementById("passwordCheck").value;
+                                var mail = document.getElementById("email").value;
+                                var addr = document.getElementById("address1").value;
+                                var addr2 = document.getElementById("address2").value;
+                                var birthdate = document.getElementById("birthdate").value;
+                                var user = new Parse.User();
+
+                                if(pass != passCheck){
+                                    alert("Password do not match!")
+                                } else{
+
+                                    user.set("username", name);
+                                    user.set("password", pass);
+                                    user.set("email", mail);
+                                    user.set("Address1", addr);
+                                    user.set("Address2", addr2);
+                                    user.set("birthdate", birthdate);
+                                    user.signUp(null, {
+                                        success: function(user) {
+                                            // Hooray! Let them use the app now.
+                                        },
+                                        error: function(user, error) {
+                                            // Show the error message somewhere and let the user try again.
+                                            alert("Error: " + error.code + " " + error.message);
+                                        }
+                                    });
+                                };
 
 
-                    <script type="text/javascript">
-                        Parse.initialize("eRQ56q28XjVaSyAlFbcQNoaBfjUp9jA4olPmxmKb", "t9e5HhbInYiFf4qeT9FqoYlkzOlACzAV4SNzsjSl");
 
-                        var TestObject = Parse.Object.extend("TestObject");
-                        var testObject = new TestObject();
+                            };
 
-                        testObject.save({foo: "fas"}, {
-                            success: function(object) {
-                                $(".success").show();
-                            },
-                            error: function(model, error) {
-                                $(".error").show();
-                            }
-                        });
+                            // other fields can be set just like with Parse.Object
 
-                        function signUp() {
 
-                            var name = document.getElementById("username").value;
-                            var pass = document.getElementById("password").value;
-                            var mail = document.getElementById("email").value;
-                            var addr = document.getElementById("address1").value;
-                            var addr2 = document.getElementById("address2").value;
-                            var birthdate = document.getElementById("birthdate").value;
-                            var user = new Parse.User();
-
-                            user.set("username", name);
-                            user.set("password", pass);
-                            user.set("email", mail);
-                            user.set("Address1", addr);
-                            user.set("Address2", addr2);
-                            user.set("birthdate", birthdate);
-                            user.signUp(null, {
-                                success: function(user) {
-                                    // Hooray! Let them use the app now.
-                                },
-                                error: function(user, error) {
-                                    // Show the error message somewhere and let the user try again.
-                                    alert("Error: " + error.code + " " + error.message);
-                                }
-                            });
-
-                        };
-
-                        // other fields can be set just like with Parse.Object
-
-                        user.signUp(null, {
-                            success: function(user) {
-                                // Hooray! Let them use the app now.
-                            },
-                            error: function(user, error) {
-                                // Show the error message somewhere and let the user try again.
-                                alert("Error: " + error.code + " " + error.message);
-                            }
-                        });
-                    </script>
-                </input>
+                        </script>
+                    </input>
+                </form>
             </div>
         </section>
     </body>

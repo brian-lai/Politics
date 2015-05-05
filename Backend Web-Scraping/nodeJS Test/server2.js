@@ -12,7 +12,7 @@ request('http://www.nytimes.com/pages/politics/index.html', function (error, res
       var title = a.text();
       // Parse the href attribute from the "a" element
       var url = a.attr('href');
-     
+
       // Our parsed meta data object
       var metadata = {
         title: title,
@@ -35,7 +35,7 @@ request('http://www.nytimes.com/pages/politics/index.html', function (error, res
       var title2 = a2.text();
       // Parse the href attribute from the "a2" element
       var url2 = a2.attr('href');
-     
+
       // Our parsed meta data object
       var metadata2 = {
         title2: title2,
@@ -47,4 +47,13 @@ request('http://www.nytimes.com/pages/politics/index.html', function (error, res
     // Log our finished parse results in the terminal
     console.log(parsedResults2);
   }
+
+
+  fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
+
+      console.log('File successfully written! - Check your project directory for the output.json file');
+
+  })
+
+  
 });
