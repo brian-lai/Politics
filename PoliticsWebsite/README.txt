@@ -17,10 +17,10 @@ Mission Statement:
 
 
 How PolyC Works:
-	Polyc makes learning about Politics Easier, and does all the heavy lifting for you.
+	Polyc makes learning about Politics easier, and does all the heavy lifting for you.
 	What we do is give you easy categories to choose from and then give you the ability
-	to read articles about that topic from two different perspectives. You don't even
-	have to look for an article.
+	to read articles about that topic from multiple perspectives. You don't even have to 
+	look for an article.
 
 	Since we aim to get young voters into the polls we also provide information on
 	voting and how to vote as a first time voter. We make it easy to find a polling

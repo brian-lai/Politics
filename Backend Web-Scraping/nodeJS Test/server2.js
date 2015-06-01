@@ -1,54 +1,48 @@
 var request = require('request');
 var cheerio = require('cheerio');
+var express = require('express');
+var app     = express();
 
-request('http://www.nytimes.com/pages/politics/index.html', function (error, response, html) {
+// app.get('/scrape', function(req, res){
+var url = 'http://www.nytimes.com/2015/06/01/us/politics/senate-nsa-surveillance-usa-freedom-act.html?ref=politics';
+request(url, function (error, response, html) {
     if (!error && response.statusCode == 200) {
         var $ = cheerio.load(html);
-        var parsedResults = [];
-        $('div.storyHeader').each(function(i, element){
+        var json = { title : "", body : "", date : "", url : ""};
+
+        $('article').each(function(i, element){
             // Select the previous element
-            var a = $(this).children().eq(0).children().eq(0);
+            var title = $(this).children().eq(0).children().eq(0).children().eq(2);
             // Parse the link title
-            var title = a.text();
+            var body = $(this).children().eq(1);
+            var bodyText = body.find("p.story-body-text story-content").text();
             // Parse the href attribute from the "a" element
-            var url = a.attr('href');
+            var date = $(this).find("time").text();
 
             // Our parsed meta data object
-            var metadata = {
-                title: title,
-                url: url
-            };
+            json.title = title;
+            json.body  = bodyText;
+            json.date  = date;
+            json.url   = url;
             // Push meta-data into parsedResults array
-            if(metadata.title != "" && metadata.url != undefined){
-                parsedResults.push(metadata);
-            }
         });
         // Log our finished parse results in the terminal
-        console.log(parsedResults);
+        console.log(json);
 
 
 
-
-        var parsedResults2 = [];
-        $('div.story').each(function(i, element){
-            // Select the previous element
-            var a2 = $(this).children().eq(2).children().eq(0);
-            // Parse the link title
-            var title2 = a2.text();
-            // Parse the href attribute from the "a2" element
-            var url2 = a2.attr('href');
-
-            // Our parsed meta data object
-            var metadata2 = {
-                title2: title2,
-                url2: url2
-            };
-            // Push meta-data into parsedResults array
-            if(metadata2.title2 != "" && metadata2.url2 != undefined){
-                parsedResults2.push(metadata2);
-            }
-        });
-        // Log our finished parse results in the terminal
-        console.log(parsedResults2);
+        // fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
+        //
+        //     console.log('File successfully written! - Check your project directory for the output.json file');
+        //
+        // })
     }
+    // Finally, we'll just send out a message to the browser reminding you that this app does not have a UI.
+    // res.send('Check your console!')
+
 });
+// })
+
+// app.listen("3000")
+// console.log("Magic happens on port 3000");
+// exports = module.exports = app;
